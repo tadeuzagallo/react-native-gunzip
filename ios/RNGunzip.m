@@ -37,7 +37,7 @@ RCT_REMAP_METHOD(gunzip,
         }
     }
 
-    if (![DCTar gzipDecompress:source toPath:folder error:nil]) {
+    if (![DCTar decompressFileAtPath:source toPath:folder error:nil]) {
       reject(@"-3", @"error while decompressing", nil);
        return;
     }
